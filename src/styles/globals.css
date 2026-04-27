@@ -1,0 +1,83 @@
+/* ── RESET ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+button { cursor: pointer; font-family: inherit; }
+input, select, textarea { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+
+/* ── DESIGN TOKENS ─────────────────────────────────────────── */
+:root {
+  /* Background layers */
+  --bg:          #0A0B0D;
+  --bg-1:        #0F1014;
+  --bg-2:        #14151A;
+  --bg-3:        #1C1D24;
+  --bg-4:        #23242E;
+
+  /* Borders */
+  --border:      rgba(255,255,255,0.07);
+  --border-2:    rgba(255,255,255,0.12);
+
+  /* Text */
+  --text:        #E8E9EF;
+  --text-2:      #9899A6;
+  --text-3:      #5A5B6A;
+  --text-inv:    #0A0B0D;
+
+  /* Accent — Amber/Gold */
+  --accent:      #F5A623;
+  --accent-dim:  rgba(245,166,35,0.15);
+  --accent-glow: rgba(245,166,35,0.08);
+
+  /* Status colors */
+  --applied:     #4A9EFF;
+  --applied-dim: rgba(74,158,255,0.12);
+  --screening:   #A78BFA;
+  --screening-dim: rgba(167,139,250,0.12);
+  --interview:   #34D399;
+  --interview-dim: rgba(52,211,153,0.12);
+  --offer:       #F5A623;
+  --offer-dim:   rgba(245,166,35,0.15);
+  --rejected:    #F87171;
+  --rejected-dim: rgba(248,113,113,0.12);
+  --withdrawn:   #6B7280;
+  --withdrawn-dim: rgba(107,114,128,0.12);
+
+  /* Mono font */
+  --mono: 'Space Mono', monospace;
+
+  /* Spacing */
+  --sidebar-w: 220px;
+  --radius: 8px;
+  --radius-lg: 14px;
+}
+
+/* ── SCROLLBAR ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--bg-4); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+/* ── UTILITIES ─────────────────────────────────────────────── */
+.mono { font-family: var(--mono); }
+.fade-in {
+  animation: fadeIn 0.35s ease forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.slide-in {
+  animation: slideIn 0.25s ease forwards;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
