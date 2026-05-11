@@ -14,7 +14,7 @@ export default function Sidebar() {
         <span className={styles.brandIcon}>◈</span>
         <div>
           <div className={styles.brandTitle}>JobTracker</div>
-          <div className={styles.brandSub}>MY · 2026</div>
+          <div className={styles.brandSub}>TN · 2026</div>
         </div>
       </div>
 
@@ -36,7 +36,7 @@ export default function Sidebar() {
 
       <div className={styles.footer}>
         <div className={styles.footerLabel}>Target Market</div>
-        <div className={styles.footerValue}>🇲🇾 Malaysia</div>
+        <div className={styles.footerValue}></div>
       </div>
     </aside>
   )
